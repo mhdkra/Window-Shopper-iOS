@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		303545E721D5C62C0051B956 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303545E621D5C62C0051B956 /* AppDelegate.swift */; };
-		303545E921D5C62C0051B956 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303545E821D5C62C0051B956 /* ViewController.swift */; };
+		303545E921D5C62C0051B956 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303545E821D5C62C0051B956 /* MainViewController.swift */; };
 		303545EC21D5C62C0051B956 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 303545EA21D5C62C0051B956 /* Main.storyboard */; };
 		303545EE21D5C62E0051B956 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 303545ED21D5C62E0051B956 /* Assets.xcassets */; };
 		303545F121D5C62E0051B956 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 303545EF21D5C62E0051B956 /* LaunchScreen.storyboard */; };
+		303545FE21D5CCD90051B956 /* CurrencyTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303545FD21D5CCD90051B956 /* CurrencyTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		303545E321D5C62C0051B956 /* Window-Shopper-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Window-Shopper-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		303545E621D5C62C0051B956 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		303545E821D5C62C0051B956 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		303545E821D5C62C0051B956 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		303545EB21D5C62C0051B956 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		303545ED21D5C62E0051B956 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		303545F021D5C62E0051B956 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		303545F221D5C62E0051B956 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		303545FD21D5CCD90051B956 /* CurrencyTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +56,31 @@
 		303545E521D5C62C0051B956 /* Window-Shopper-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				303545FC21D5CC290051B956 /* Views */,
+				303545F921D5C9B90051B956 /* Controller */,
 				303545E621D5C62C0051B956 /* AppDelegate.swift */,
-				303545E821D5C62C0051B956 /* ViewController.swift */,
 				303545EA21D5C62C0051B956 /* Main.storyboard */,
 				303545ED21D5C62E0051B956 /* Assets.xcassets */,
 				303545EF21D5C62E0051B956 /* LaunchScreen.storyboard */,
 				303545F221D5C62E0051B956 /* Info.plist */,
 			);
 			path = "Window-Shopper-iOS";
+			sourceTree = "<group>";
+		};
+		303545F921D5C9B90051B956 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				303545E821D5C62C0051B956 /* MainViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		303545FC21D5CC290051B956 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				303545FD21D5CCD90051B956 /* CurrencyTextField.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +154,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				303545E921D5C62C0051B956 /* ViewController.swift in Sources */,
+				303545FE21D5CCD90051B956 /* CurrencyTextField.swift in Sources */,
+				303545E921D5C62C0051B956 /* MainViewController.swift in Sources */,
 				303545E721D5C62C0051B956 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
