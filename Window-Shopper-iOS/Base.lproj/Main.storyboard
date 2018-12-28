@@ -9,17 +9,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--MainVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Window_Shopper_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainVC" customModule="Window_Shopper_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="windowShopperBG" translatesAutoresizingMaskIntoConstraints="NO" id="vTj-VQ-2po">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="windowShopperBG" translatesAutoresizingMaskIntoConstraints="NO" id="vTj-VQ-2po">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="windowShopperIcon" translatesAutoresizingMaskIntoConstraints="NO" id="PVh-fu-nI6">
                                 <rect key="frame" x="157.5" y="70" width="60" height="60"/>
@@ -28,22 +27,49 @@
                                     <constraint firstAttribute="width" constant="60" id="xRS-XJ-pz0"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Your hourly wage" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3n8-w5-zTM" customClass="CurrencyTextField" customModule="Window_Shopper_iOS" customModuleProvider="target">
-                                <rect key="frame" x="66" y="163" width="243" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Your hourly wage" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3n8-w5-zTM" customClass="CurrencyTextField" customModule="Window_Shopper_iOS" customModuleProvider="target">
+                                <rect key="frame" x="20" y="165" width="335" height="40"/>
                                 <color key="backgroundColor" white="1" alpha="0.22562607020547945" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="MWp-AC-1GV"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Item prices" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Ij-pg-zem" customClass="CurrencyTextField" customModule="Window_Shopper_iOS" customModuleProvider="target">
+                                <rect key="frame" x="20" y="230" width="335" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="0.2256260702" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="51d-Ej-kyJ"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="2Ij-pg-zem" firstAttribute="leading" secondItem="3n8-w5-zTM" secondAttribute="leading" id="1xs-cy-xW7"/>
+                            <constraint firstItem="vTj-VQ-2po" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="4Sd-Il-7gk"/>
                             <constraint firstItem="PVh-fu-nI6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="Apw-SI-PWs"/>
+                            <constraint firstItem="vTj-VQ-2po" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="D6t-dW-D4y"/>
+                            <constraint firstItem="vTj-VQ-2po" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="JXY-Cq-fOR"/>
                             <constraint firstItem="PVh-fu-nI6" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="KsN-9c-MDe"/>
+                            <constraint firstItem="3n8-w5-zTM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="NDH-du-8Hk"/>
+                            <constraint firstItem="2Ij-pg-zem" firstAttribute="height" secondItem="3n8-w5-zTM" secondAttribute="height" id="O6j-ou-bXM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3n8-w5-zTM" secondAttribute="trailing" constant="20" id="OaV-bn-lm6"/>
+                            <constraint firstItem="3n8-w5-zTM" firstAttribute="top" secondItem="PVh-fu-nI6" secondAttribute="bottom" constant="35" id="V2X-RY-rT2"/>
+                            <constraint firstItem="2Ij-pg-zem" firstAttribute="trailing" secondItem="3n8-w5-zTM" secondAttribute="trailing" id="hVa-CR-Kso"/>
+                            <constraint firstItem="vTj-VQ-2po" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="r2m-d3-Ygg"/>
+                            <constraint firstItem="2Ij-pg-zem" firstAttribute="top" secondItem="3n8-w5-zTM" secondAttribute="bottom" constant="25" id="sDd-FT-uDL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="itemPriceTextField" destination="2Ij-pg-zem" id="4Yo-PN-kJE"/>
+                        <outlet property="wageTextField" destination="3n8-w5-zTM" id="zfb-1O-ZlZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
